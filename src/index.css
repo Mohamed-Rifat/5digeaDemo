@@ -1,0 +1,89 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ألوان الأفراح - الذهبي والوردي الناعم */
+  --gold-primary: #D4AF37;
+  --gold-light: #F4E8C1;
+  --gold-dark: #B8860B;
+  --pink-soft: #FFE6E6;
+  --pink-light: #FFF0F5;
+  --ivory: #FFFFF0;
+  --white: #FFFFFF;
+  --dark-text: #4A4A4A;
+  
+  /* ظلال ناعمة */
+  --shadow-soft: 0 8px 30px rgba(212, 175, 55, 0.08);
+  --shadow-medium: 0 15px 35px rgba(212, 175, 55, 0.1);
+  
+  /* تأثير الزجاج */
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--pink-light) 0%, var(--ivory) 100%);
+  min-height: 100vh;
+  color: var(--dark-text);
+}
+
+/* تصميمات خاصة بمكونات Auth */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="%23FFE6E6" opacity="0.1"/></svg>');
+  background-size: cover;
+}
+
+/* تصميم الأزرار */
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold-dark);
+  border: 2px solid var(--gold-primary);
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold-light);
+}
